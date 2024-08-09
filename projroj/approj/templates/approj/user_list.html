@@ -1,0 +1,24 @@
+<!-- myapp/templates/myapp/user_list.html -->
+{% extends "approj/base.html" %}
+
+{% block title %}User List{% endblock %}
+
+{% block content %}
+<div>
+    <h1>User List</h1>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone_number }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
